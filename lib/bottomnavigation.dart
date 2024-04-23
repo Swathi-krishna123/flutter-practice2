@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tasks/drawerr.dart';
 
 class BottomNavi extends StatefulWidget {
   const BottomNavi({super.key});
@@ -35,6 +36,7 @@ class _BottomNaviState extends State<BottomNavi> {
         currentIndex: selectedindex,
         selectedItemColor: Colors.blue,
       ),
+
       body: [
         const Center(
           child: Text("Home Page"),
@@ -46,6 +48,9 @@ class _BottomNaviState extends State<BottomNavi> {
           child: Text("Messages"),
         ),
       ][selectedindex],
+      floatingActionButton: FloatingActionButton(onPressed:() {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Drawerrr()));
+      }),
     );
   }
 }
